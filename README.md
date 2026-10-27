@@ -11,6 +11,7 @@
   <img alt="KOReader" src="https://img.shields.io/badge/KOReader-plugin-1a1a1a?style=flat-square">
   <img alt="Kindle" src="https://img.shields.io/badge/Kindle-jailbroken-6b6b6b?style=flat-square">
   <img alt="Licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-6b6b6b?style=flat-square">
+  <a href="https://claude.com/claude-code"><img alt="Feito com Claude Code" src="https://img.shields.io/badge/feito%20com-Claude%20Code-d97757?style=flat-square"></a>
 </p>
 
 ---
@@ -147,6 +148,7 @@ git tag v0.1.0 && git push --tags
 
 ## Créditos
 
+- Criado com [Claude Code](https://claude.com/claude-code) — código, artes e documentação.
 - [KOReader](https://github.com/koreader/koreader) e [FBInk](https://github.com/NiLuJe/FBInk).
 - ZenOS / [ZenLabs](https://github.com/xZenLabs) — tela de restauração e o
   [kindle-browser-scriptlet](https://github.com/xZenLabs/kindle-browser-scriptlet), base do Navegador.

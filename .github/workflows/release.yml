@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar luac
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+
+      - name: Compilar
+        run: ./build.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kindlescriptlauncher.koplugin
+          path: dist/*.zip
+
+      - name: Publicar release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
+          generate_release_notes: true
